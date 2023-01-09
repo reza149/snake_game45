@@ -5,6 +5,7 @@
 #include "play_board.hpp"
 
 using namespace std;
+
 void start_game()
 {
     int score_limit;
@@ -23,7 +24,6 @@ void start_game()
     game.hit_apple = false;
     do
     {
-        //game.snake_state();
         game.set_play_board();
         if(game.eat_apple_test())
         {
@@ -57,7 +57,6 @@ void start_game()
         cout << "enter char -> ";
         cin >> choose_char;
         do_move.set_move(choose_char, &game);
-        //game.snake_state();
         cout << "\n\n\n";
         system("clear");
     } while (choose_char != 'e');
